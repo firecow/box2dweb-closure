@@ -48,10 +48,10 @@ goog.require('box2d.dynamics.joints.Joint');
 box2d.dynamics.joints.RevoluteJoint = function(def) {
     goog.base(this, def);
 
-    this.K = new box2d.common.math.Mat22();
-    this.K1 = new box2d.common.math.Mat22();
-    this.K2 = new box2d.common.math.Mat22();
-    this.K3 = new box2d.common.math.Mat22();
+    this.K = box2d.common.math.Mat22.get();
+    this.K1 = box2d.common.math.Mat22.get();
+    this.K2 = box2d.common.math.Mat22.get();
+    this.K3 = box2d.common.math.Mat22.get();
     this.impulse3 = box2d.common.math.Vec3.get(0, 0, 0);
     this.impulse2 = box2d.common.math.Vec2.get(0, 0);
     this.reduced = box2d.common.math.Vec2.get(0, 0);
